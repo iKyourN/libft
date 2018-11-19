@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 11:57:10 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/19 04:30:30 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/11/19 22:27:20 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 		free(*alst);
 		(*alst) = tmp;
 	}
-	ft_memdel((void**)alst);
+	*alst = NULL;
 }

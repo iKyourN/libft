@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 19:01:37 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/19 04:29:52 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/11/19 22:17:52 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,12 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		list->content = ft_strdup(content);
+		if (!(list->content = malloc(content_size)))
+		{
+			free(list);
+			return (NULL);
+		}
+		ft_memcpy(list->content, content, content_size);
 		list->content_size = content_size;
 		list->next = NULL;
 	}
