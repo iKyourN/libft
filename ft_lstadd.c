@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 13:30:20 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/16 14:41:38 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/11/19 04:50:10 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	new->next = (*alst);
-	*alst = new;
+	if (new != NULL)
+	{
+		new->next = (*alst);
+		*alst = new;
+	}
 }

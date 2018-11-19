@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 22:35:35 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/13 22:29:36 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/11/19 05:38:56 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,16 @@
 
 void	ft_putnbr(int n)
 {
+	unsigned int nbr;
+
 	if (n < 0)
 	{
 		ft_putchar('-');
-		if (n == -2147483648)
-		{
-			ft_putchar('2');
-			n = -147483648;
-		}
-		n = -n;
+		nbr = -n;
 	}
-	if (n < 10)
-		ft_putchar(n + 48);
 	else
-	{
-		ft_putnbr((n - n % 10) / 10);
-		ft_putchar(n % 10 + 48);
-	}
+		nbr = n;
+	if (nbr >= 10)
+		ft_putnbr(nbr / 10);
+	ft_putchar((nbr % 10) + 48);
 }
