@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 11:33:55 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/19 04:25:14 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/11/19 05:51:04 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,5 @@
 
 void	ft_putstr(char const *s)
 {
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		write(1, &s[i], 1);
-		i++;
-	}
+	write(1, s, ft_strlen(s));
 }
