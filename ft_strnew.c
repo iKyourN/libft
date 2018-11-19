@@ -6,11 +6,12 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:09:15 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/14 15:09:03 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/11/19 04:27:44 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strnew(size_t size)
 {

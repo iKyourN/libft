@@ -6,11 +6,12 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:41:57 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/17 22:52:09 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/11/19 04:20:18 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	ft_len(int n, int neg)
 {

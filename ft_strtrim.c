@@ -6,11 +6,12 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 20:30:03 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/17 22:39:11 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/11/19 04:29:27 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static void	ft_assign(char *s1, char const *s, int j, int i)
 {

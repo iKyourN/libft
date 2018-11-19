@@ -6,11 +6,12 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 20:58:29 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/18 14:55:59 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/11/19 04:28:16 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	ft_nbr_w(char const *s, char c)
 {
