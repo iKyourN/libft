@@ -6,16 +6,16 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:41:57 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/19 04:20:18 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/11/21 16:21:27 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static int	ft_len(int n, int neg)
+static int	ft_len(long n, int neg)
 {
-	int i;
+	long i;
 
 	i = 0;
 	if (n == 0)
@@ -30,21 +30,16 @@ static int	ft_len(int n, int neg)
 	return (i);
 }
 
-static void	ft_nbr(char *nbr, int neg, int len, int n)
+static void	ft_nbr(char *nbr, int neg, int len, long n)
 {
 	int i;
 
 	i = 0;
 	if (n == 0)
 		len--;
-	if (neg == 1 || neg == 2)
+	if (neg == 1)
 	{
 		nbr[i] = '-';
-		i++;
-	}
-	if (neg == 2)
-	{
-		nbr[i] = '2';
 		i++;
 	}
 	nbr[len + 1] = '\0';
@@ -60,27 +55,23 @@ static void	ft_nbr(char *nbr, int neg, int len, int n)
 
 char		*ft_itoa(int n)
 {
-	char	*nbr;
-	int		neg;
-	int		len;
-	int		int_max;
+	char			*nbr;
+	int				neg;
+	int				len;
+	int				int_max;
+	long			n1;
 
 	neg = 0;
 	int_max = 0;
-	if (n < 0)
+	n1 = n;
+	if (n1 < 0)
 	{
-		if (n == -2147483648)
-		{
-			n = n + 2000000000;
-			neg++;
-			int_max++;
-		}
-		n = -n;
+		n1 = -n1;
 		neg++;
 	}
-	len = ft_len(n, neg) + int_max;
+	len = ft_len(n1, neg);
 	if (!(nbr = (char*)malloc(sizeof(char) * (len + neg) + 1)))
 		return (NULL);
-	ft_nbr(nbr, neg, len, n);
+	ft_nbr(nbr, neg, len, n1);
 	return (nbr);
 }
