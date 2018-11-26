@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnclr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/26 18:13:35 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/26 19:55:48 by yberramd         ###   ########.fr       */
+/*   Created: 2018/11/26 19:53:23 by yberramd          #+#    #+#             */
+/*   Updated: 2018/11/26 19:56:51 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-void	*ft_strnchr(const char *s, int c, size_t len)
+void	ft_strnclr(char *s, size_t length)
 {
-	unsigned int	i;
-	char			c1;
-	char			*s1;
+	int	i;
 
 	i = 0;
-	c1 = (char)c;
-	s1 = (char*)s;
-	while(s1[i] != '\0' && i < len)
+	if (s != NULL)
 	{
-		if (s1[i] == c1)
-			return (&s1[i]);
-		i++;
+		while (i < length)
+		{
+			s[i] = '\0';
+			i++;
+		}
 	}
-	if (s1[i] == c1)
-		return (&s1[i]);
-	return (NULL);
 }
