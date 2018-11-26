@@ -6,7 +6,7 @@
 #    By: yberramd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/11 16:45:12 by yberramd          #+#    #+#              #
-#    Updated: 2018/11/18 22:51:46 by yberramd         ###   ########.fr        #
+#    Updated: 2018/11/26 18:18:27 by yberramd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,9 @@ SRCS = ft_atoi.c				\
 	   ft_lstmap.c				\
 	   ft_min.c					\
 	   ft_max.c					\
-	   ft_pow.c
+	   ft_pow.c					\
+	   ft_nbr_w.c				\
+	   ft_strnchr.c
 
 OBJS = $(SRCS:.c=.o)
 

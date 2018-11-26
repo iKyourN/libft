@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:03:17 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/19 03:23:17 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/11/26 18:19:42 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_max(int a, int b);
 int					ft_min(int a, int b);
 int					ft_pow(int nbr, int pow);
+int					ft_nbr_w(char const *s, char c);
+void				*ft_strnchr(const char *s, int c, size_t len);
 
 #endif

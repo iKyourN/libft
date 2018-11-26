@@ -6,35 +6,12 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 20:58:29 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/21 13:32:45 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/11/25 03:34:42 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
-static int	ft_nbr_w(char const *s, char c)
-{
-	int i;
-	int nbr_w;
-	int	a;
-
-	a = 0;
-	nbr_w = 0;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] != c && a == 0)
-		{
-			nbr_w++;
-			a = 1;
-		}
-		if (s[i] == c)
-			a = 0;
-		i++;
-	}
-	return (nbr_w);
-}
 
 static void	ft_index(char const *s, char c, unsigned int *index)
 {
