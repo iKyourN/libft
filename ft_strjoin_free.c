@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 13:27:20 by yberramd          #+#    #+#             */
-/*   Updated: 2018/12/03 13:32:06 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/12/03 13:46:33 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int		ft_strjoin_free(char **line, char *buffer)
 
 	if (!buffer && !line)
 		return (-1);
-	if(!(tmp = ft_strjoin(*line,buffer)))
+	if (!(tmp = ft_strjoin(*line, buffer)))
 		return (-1);
 	ft_strdel(line);
-	if(!(*line = ft_strdup(tmp)))
+	if (!(*line = ft_strdup(tmp)))
 		return (-1);
 	ft_strdel(&tmp);
 	return (1);
