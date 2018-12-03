@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:03:17 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/26 19:58:40 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/12/03 13:32:57 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,7 @@ int					ft_pow(int nbr, int pow);
 int					ft_nbr_w(char const *s, char c);
 void				*ft_strnchr(const char *s, int c, size_t len);
 void				ft_strnclr(char *s, size_t length);
+int					ft_strchr_i(const char *s, int c);
+int					ft_strjoin_free(char **line, char *buffer);
 
 #endif

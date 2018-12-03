@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 19:53:23 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/26 19:56:51 by yberramd         ###   ########.fr       */
+/*   Updated: 2018/11/26 21:32:58 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_strnclr(char *s, size_t length)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	if (s != NULL)
