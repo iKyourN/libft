@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
+/*   ft_strdel_double.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/03 13:27:20 by yberramd          #+#    #+#             */
-/*   Updated: 2019/01/17 16:19:01 by yberramd         ###   ########.fr       */
+/*   Created: 2019/01/16 09:21:35 by yberramd          #+#    #+#             */
+/*   Updated: 2019/01/16 09:38:02 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "stdlib.h"
 
-int		ft_strjoin_free(char **line, char *buffer, int option)
+void	ft_strdel_double(char **tab, int y, int x)
 {
-	char	*tmp;
+	int i;
 
-	if (option >= 0 && option <= 3)
+	i = 0;
+	while (i < y)
 	{
-		if (!buffer && !line)
-			return (-1);
-		if (!(tmp = ft_strjoin(*line, buffer)))
-			return (-1);
-		if (option == 2 || option == 3)
-			ft_strdel(&buffer);
-		if (option == 1 || option == 3)
-			ft_strdel(line);
-		*line = tmp;
-		return (1);
+		ft_strdel(&tab[i]);
+		i++;
 	}
-	return (-1);
+	free(tab);
 }

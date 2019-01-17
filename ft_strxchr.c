@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
+/*   ft_strxchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/03 13:27:20 by yberramd          #+#    #+#             */
-/*   Updated: 2019/01/17 16:19:01 by yberramd         ###   ########.fr       */
+/*   Created: 2018/12/10 12:51:10 by yberramd          #+#    #+#             */
+/*   Updated: 2018/12/10 13:07:37 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strjoin_free(char **line, char *buffer, int option)
+char	*ft_strxchr(const char *s, int c, int x)
 {
-	char	*tmp;
+	int		i;
+	char	*s1;
 
-	if (option >= 0 && option <= 3)
-	{
-		if (!buffer && !line)
-			return (-1);
-		if (!(tmp = ft_strjoin(*line, buffer)))
-			return (-1);
-		if (option == 2 || option == 3)
-			ft_strdel(&buffer);
-		if (option == 1 || option == 3)
-			ft_strdel(line);
-		*line = tmp;
-		return (1);
-	}
-	return (-1);
+	i = 1;
+	s1 = ft_strchr(s, c);
+	if (i < x)
+		while ((s1 = ft_strchr(s1, c)) != NULL && i < x)
+			i++;
+	return (s1);
 }
