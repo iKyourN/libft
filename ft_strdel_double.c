@@ -6,21 +6,21 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/16 09:21:35 by yberramd          #+#    #+#             */
-/*   Updated: 2019/01/16 09:38:02 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/01/18 12:09:13 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "stdlib.h"
 
-void	ft_strdel_double(char **tab, int y, int x)
+void	ft_strdel_double(char ***tab, int y, int x)
 {
 	int i;
 
 	i = 0;
 	while (i < y)
 	{
-		ft_strdel(&tab[i]);
+		ft_strdel(tab[i]);
 		i++;
 	}
 	free(tab);
