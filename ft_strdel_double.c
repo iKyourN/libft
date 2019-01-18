@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/16 09:21:35 by yberramd          #+#    #+#             */
-/*   Updated: 2019/01/18 12:09:13 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/01/18 12:34:34 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	ft_strdel_double(char ***tab, int y, int x)
 	i = 0;
 	while (i < y)
 	{
-		ft_strdel(tab[i]);
+		ft_strdel(&(*tab)[i]);
 		i++;
 	}
-	free(tab);
+	free(*tab);
 }
