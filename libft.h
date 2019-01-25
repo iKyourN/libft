@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:03:17 by yberramd          #+#    #+#             */
-/*   Updated: 2019/01/25 11:05:20 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/01/25 14:14:03 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,6 @@ int					ft_strjoin_free(char **line, char *buffer, int option);
 char				*ft_strxchr(const char *s, int c, int x);
 void				ft_memalloc_double(char ***tab, int y, int x);
 void				ft_strdel_double(char ***tab, int y);
+char	*ft_itoa_base(int nbr, char *	base_to);
 
 #endif
