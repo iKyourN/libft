@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/18 22:39:23 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/18 22:49:41 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/02/09 09:39:03 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_pow(int nbr, int pow)
 		return (0);
 	else if (pow == 0)
 		return (1);
-	while (i < pow)
+	while (i < pow - 1)
 	{
 		nbr = nbr * nbr;
 		i++;

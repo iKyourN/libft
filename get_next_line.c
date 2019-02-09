@@ -6,12 +6,14 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 17:03:03 by yberramd          #+#    #+#             */
-/*   Updated: 2019/02/06 14:21:42 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/02/06 14:42:44 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <stdio.h>
+#include <limits.h>
+#include <unistd.h>
+#include "libft.h"
+#define BUFF_SIZE 10000
 
 int			get_next_line(const int fd, char **line)
 {
@@ -33,10 +35,10 @@ int			get_next_line(const int fd, char **line)
 		if ((index = ft_strchr_i(tmp, '\n')) != -1)
 		{
 			buffer[fd][index] = '\0';
-			ft_strjoin_free(line, tmp);
+			ft_strjoin_free(line, tmp, 1);
 			ft_strncpy(tmp, &buffer[fd][index + 1], BUFF_SIZE);
 			return (1);
 		}
-		ft_strjoin_free(line, tmp);
+		ft_strjoin_free(line, tmp, 1);
 	}
 }
