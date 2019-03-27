@@ -6,23 +6,60 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/05 16:09:07 by yberramd          #+#    #+#             */
-/*   Updated: 2019/02/09 09:39:17 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/03/27 15:47:15 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-static int		nbr_b_dp(double nbr)
-{
-	int i;
+#define MAX_DIGIT 310
 
+static char	*dtoa(double nbr, char *str, int dp)
+{
+	int		i;
+	double	nbr2;
+
+	nbr2 = 0;
 	i = 0;
-	return (i);
+	while (nbr > 0.0 && i < dp + 2)
+	{
+		nbr2 = (int)nbr;
+		if (i == dp + 1)
+		{
+			str[i] = '.';
+			i++;
+		}
+		str[i] = '0' + (char)nbr2;
+		i++;
+		nbr -= nbr2;
+		nbr *= 10;
+	}
+	str[i] = '\0';
+	return (str);
 }
 
 char	*ft_dtoa(double nbr)
 {
-	char *str;
+	double	i;
+	char	*str;
+	int		dp;
 
+	i = 1;
+	dp = 0;
+	if (!(str = (char*)malloc(sizeof(char) * MAX_DIGIT)))
+		return (NULL);
+	while (nbr - (10 * i) >= 0)
+	{
+		i*=10;
+		dp++;
+	}
+	i = 0;
+	while (dp - i > 0)
+	{
+		nbr = nbr / 10;
+		i++;
+	}
+	str = dtoa(nbr, str, dp);
 	return (str);
 }
