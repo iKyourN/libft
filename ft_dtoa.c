@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/05 16:09:07 by yberramd          #+#    #+#             */
-/*   Updated: 2019/03/27 15:47:15 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/03/27 18:15:26 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 
 #define MAX_DIGIT 310
 
-static char	*dtoa(double nbr, char *str, int dp)
+static char	*dtoa(double nbr, char *str, int dp, int precision)
 {
 	int		i;
 	double	nbr2;
 
 	nbr2 = 0;
 	i = 0;
-	while (nbr > 0.0 && i < dp + 2)
+	while (nbr > 0.0 && i < dp + 2 + precision)
 	{
 		nbr2 = (int)nbr;
 		if (i == dp + 1)
@@ -39,7 +39,7 @@ static char	*dtoa(double nbr, char *str, int dp)
 	return (str);
 }
 
-char	*ft_dtoa(double nbr)
+char	*ft_dtoa(double nbr, int precision)
 {
 	double	i;
 	char	*str;
@@ -60,6 +60,6 @@ char	*ft_dtoa(double nbr)
 		nbr = nbr / 10;
 		i++;
 	}
-	str = dtoa(nbr, str, dp);
+	str = dtoa(nbr, str, dp, precision);
 	return (str);
 }
