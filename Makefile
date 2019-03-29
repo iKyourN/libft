@@ -6,7 +6,7 @@
 #    By: yberramd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/11 16:45:12 by yberramd          #+#    #+#              #
-#    Updated: 2019/02/08 17:39:46 by yberramd         ###   ########.fr        #
+#    Updated: 2019/03/29 13:53:10 by yberramd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,8 @@ SRCS = ft_atoi.c				\
 	   ft_memalloc_double.c		\
 	   ft_strdel_double.c		\
 	   ft_itoa_base.c			\
-	   ft_dtoa.c
+	   ft_dtoa.c				\
+	   ft_ltoa_base.c
 
 OBJS = $(SRCS:.c=.o)
 

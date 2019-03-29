@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:03:17 by yberramd          #+#    #+#             */
-/*   Updated: 2019/03/27 18:15:18 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/03/29 13:52:48 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ void				ft_strdel_double(char ***tab, int y);
 char				*ft_itoa_base(unsigned int nbr, char *	base_to);
 int					get_next_line(const int fd, char **line);
 char				*ft_dtoa(double nbr, int precision);
+char				*ft_ltoa_base(long nbr, char *	base_to);
 
 #endif
