@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/05 16:09:07 by yberramd          #+#    #+#             */
-/*   Updated: 2019/03/27 18:15:26 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/05/07 19:47:02 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static char	*dtoa(double nbr, char *str, int dp, int precision)
 	return (str);
 }
 
-char	*ft_dtoa(double nbr, int precision)
+char		*ft_dtoa(double nbr, int precision)
 {
 	double	i;
 	char	*str;
@@ -51,7 +51,7 @@ char	*ft_dtoa(double nbr, int precision)
 		return (NULL);
 	while (nbr - (10 * i) >= 0)
 	{
-		i*=10;
+		i *= 10;
 		dp++;
 	}
 	i = 0;

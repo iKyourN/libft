@@ -6,14 +6,14 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 14:05:43 by yberramd          #+#    #+#             */
-/*   Updated: 2019/02/05 15:06:47 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/05/07 19:47:25 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_itoa_base(unsigned int nbr, char *	base_to)
+char	*ft_itoa_base(unsigned int nbr, char *base_to)
 {
 	int		a;
 	int		n;

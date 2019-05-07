@@ -6,14 +6,14 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 17:03:03 by yberramd          #+#    #+#             */
-/*   Updated: 2019/02/06 14:42:44 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/05/07 15:52:05 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
 #include <unistd.h>
 #include "libft.h"
-#define BUFF_SIZE 10000
+#define BUFF_SIZE 1000
 
 int			get_next_line(const int fd, char **line)
 {

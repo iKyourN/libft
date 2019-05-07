@@ -6,14 +6,14 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/25 14:05:43 by yberramd          #+#    #+#             */
-/*   Updated: 2019/03/29 13:52:18 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/05/07 19:47:49 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_ltoa_base(long nbr, char *	base_to)
+char	*ft_ltoa_base(long nbr, char *base_to)
 {
 	long	a;
 	long	n;
