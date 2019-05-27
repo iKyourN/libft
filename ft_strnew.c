@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:09:15 by yberramd          #+#    #+#             */
-/*   Updated: 2018/11/19 04:27:44 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/05/10 14:52:41 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnew(size_t size)
 	i = 0;
 	if (!(str = (char*)malloc(sizeof(char) * size + 1)))
 		return (NULL);
-	while (i < size + 1)
+	while (i < size)
 	{
 		str[i] = 0;
 		i++;

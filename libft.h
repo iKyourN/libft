@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:03:17 by yberramd          #+#    #+#             */
-/*   Updated: 2019/05/07 20:08:08 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/05/24 19:11:08 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,11 @@ int					get_next_line(const int fd, char **line);
 char				*ft_dtoa(double nbr, int precision);
 char				*ft_ltoa_base(long nbr, char *base_to);
 char				**ft_split_whitespace(char const *s);
+void				ft_putstr_double(char **str);
+int					ft_strfchr(char *str1, char *str2);
+int					ft_deplace_double(char **tab);
+int					ft_cpy_double(char ***dest, char **src);
+char				**ft_add_double(char ***tab, char *str);
+void				ft_init_tab(char **tab, size_t n);
 
 #endif

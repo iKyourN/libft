@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnchr.c                                       :+:      :+:    :+:   */
+/*   ft_add_double.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/26 18:13:35 by yberramd          #+#    #+#             */
-/*   Updated: 2019/05/10 19:46:40 by yberramd         ###   ########.fr       */
+/*   Created: 2019/05/21 16:52:26 by yberramd          #+#    #+#             */
+/*   Updated: 2019/05/25 20:42:35 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
-#include <string.h>
 
-void	*ft_strnchr(const char *s, int c, size_t len)
+char	**ft_add_double(char ***tab, char *str)
 {
-	unsigned int	i;
-	char			c1;
-	char			*s1;
+	char	**tmp;
+	int		i;
 
 	i = 0;
-	c1 = (char)c;
-	s1 = (char*)s;
-	while (s1[i] != '\0' && i < len)
+	if (((*tab) == NULL || str == NULL))
+		return (NULL);
+	while ((*tab)[i])
+		i++;
+	if (!(tmp = (char**)malloc(sizeof(char*) * (i + 2))))
+		return (NULL);
+	ft_init_tab(tmp, (i + 2));
+	i = 0;
+	while ((*tab)[i])
 	{
-		if (s1[i] == c1)
-			return (&s1[i]);
+		if (!(tmp[i] = ft_strdup((*tab)[i])))
+			return (NULL);
 		i++;
 	}
-	if (s1[i] == c1)
-		return (&s1[i]);
-	return (NULL);
+	if (!(tmp[i] = ft_strdup(str)))
+		return (NULL);
+	ft_strdel_double(&(*tab));
+	return (tmp);
 }

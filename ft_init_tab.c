@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_init_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 11:33:55 by yberramd          #+#    #+#             */
-/*   Updated: 2019/05/10 19:22:43 by yberramd         ###   ########.fr       */
+/*   Created: 2019/05/24 19:06:32 by yberramd          #+#    #+#             */
+/*   Updated: 2019/05/24 19:14:27 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putstr(char const *s)
+void	ft_init_tab(char **tab, size_t n)
 {
-	write(1, s, ft_strlen(s));
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		tab[i] = NULL;
+		i++;
+	}
 }
