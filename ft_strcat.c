@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:37:47 by yberramd          #+#    #+#             */
-/*   Updated: 2019/05/07 19:08:18 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/06/02 15:35:46 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strcat(char *s1, const char *s2)
 
 	i = 0;
 	a = 0;
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	while (s1[i] != '\0')
 		i++;
 	while (s2[a] != '\0')

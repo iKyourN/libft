@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/13 18:06:40 by yberramd          #+#    #+#             */
-/*   Updated: 2019/05/25 20:20:51 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/06/02 17:30:23 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_deplace_double(char **tab)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
@@ -25,7 +25,10 @@ int	ft_deplace_double(char **tab)
 	{
 		ft_strdel(&tab[i]);
 		if (!(tab[i] = ft_strdup(tab[i + 1])))
+		{
+			tab[i] = NULL;
 			return (-1);
+		}
 		i++;
 	}
 	ft_strdel(&tab[i]);

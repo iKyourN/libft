@@ -6,14 +6,14 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 20:58:29 by yberramd          #+#    #+#             */
-/*   Updated: 2019/05/07 19:49:28 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/06/02 19:02:26 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static void		split(char **tab_s, char c, char const *s, int nbr_w)
+static int		split(char **tab_s, char c, char const *s, int nbr_w)
 {
 	int	i;
 	int	j;
@@ -31,9 +31,11 @@ static void		split(char **tab_s, char c, char const *s, int nbr_w)
 			i++;
 			len++;
 		}
-		tab_s[j] = ft_strsub(s, i - len, len);
+		if ((tab_s[j] = ft_strsub(s, i - len, len)) == NULL)
+			return (-1);
 		j++;
 	}
+	return (1);
 }
 
 char			**ft_strsplit(char const *s, char c)
@@ -47,6 +49,7 @@ char			**ft_strsplit(char const *s, char c)
 	if (!(tab_s = (char**)malloc(sizeof(char*) * (nbr_w + 1))))
 		return (NULL);
 	tab_s[nbr_w--] = NULL;
-	split(tab_s, c, s, nbr_w);
+	if (split(tab_s, c, s, nbr_w) == -1)
+		return (NULL);
 	return (tab_s);
 }
