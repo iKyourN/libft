@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_blank.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 16:09:15 by yberramd          #+#    #+#             */
-/*   Updated: 2019/07/18 18:39:47 by yberramd         ###   ########.fr       */
+/*   Created: 2019/08/15 17:10:35 by yberramd          #+#    #+#             */
+/*   Updated: 2019/08/15 17:14:00 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strnew(size_t size)
+int		ft_blank(char *str)
 {
-	char			*str;
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-		return (NULL);
-	while (i < size)
-	{
-		str[i] = 0;
+	while (ft_isspace(str[i]) && str[i] != '\0')
 		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	if (str[i] == '\0')
+		return (1);
+	else
+		return (0);
 }

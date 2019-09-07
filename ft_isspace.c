@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 16:09:15 by yberramd          #+#    #+#             */
-/*   Updated: 2019/07/18 18:39:47 by yberramd         ###   ########.fr       */
+/*   Created: 2019/08/08 16:57:42 by yberramd          #+#    #+#             */
+/*   Updated: 2019/08/08 16:59:47 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strnew(size_t size)
+int		ft_isspace(char c)
 {
-	char			*str;
-	unsigned int	i;
-
-	i = 0;
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-		return (NULL);
-	while (i < size)
-	{
-		str[i] = 0;
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	return (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r'
+			|| c == ' ');
 }

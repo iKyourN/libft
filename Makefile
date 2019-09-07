@@ -6,7 +6,7 @@
 #    By: yberramd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/11 16:45:12 by yberramd          #+#    #+#              #
-#    Updated: 2019/05/25 18:45:29 by yberramd         ###   ########.fr        #
+#    Updated: 2019/09/03 17:11:30 by yberramd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,6 +96,9 @@ SRCS = ft_atoi.c				\
 	   ft_cpy_double.c			\
 	   ft_add_double.c			\
 	   ft_init_tab.c			\
+	   ft_isspace.c				\
+	   ft_blank.c				\
+	   ft_strdeplace.c			\
 	   ft_putstr_double.c
 
 OBJS = $(SRCS:.c=.o)

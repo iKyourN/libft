@@ -6,7 +6,7 @@
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:03:17 by yberramd          #+#    #+#             */
-/*   Updated: 2019/05/24 19:11:08 by yberramd         ###   ########.fr       */
+/*   Updated: 2019/09/03 17:11:04 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,8 @@ int					ft_deplace_double(char **tab);
 int					ft_cpy_double(char ***dest, char **src);
 char				**ft_add_double(char ***tab, char *str);
 void				ft_init_tab(char **tab, size_t n);
+int					ft_blank(char *str);
+int					ft_isspace(char c);
+void				ft_strdeplace(char **str, int deplace, int i);
 
 #endif

@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strdeplace.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yberramd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 16:09:15 by yberramd          #+#    #+#             */
-/*   Updated: 2019/07/18 18:39:47 by yberramd         ###   ########.fr       */
+/*   Created: 2019/09/03 15:41:09 by yberramd          #+#    #+#             */
+/*   Updated: 2019/09/03 17:57:09 by yberramd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strnew(size_t size)
+void	ft_strdeplace(char **str, int deplace, int i)
 {
-	char			*str;
-	unsigned int	i;
-
-	i = 0;
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
-		return (NULL);
-	while (i < size)
+	while ((*str)[i] != '\0')
 	{
-		str[i] = 0;
+		(*str)[i - deplace] = (*str)[i];
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	(*str)[i - deplace] = '\0';
 }
